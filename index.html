@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="assets/css/slider.css">
 		<script src="assets/js/modernizr.custom.63321.js"></script>
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/modal.css">
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -28,8 +29,11 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li class="current"><a href="index.html">Home</a></li>
-								<li>
+								 <li class="current"><a href="index.html">Home</a></li>
+								 <li><a href="#intro">Introduction</a></li> 
+								 <li><a href="#details">Details</a></li> 
+								 <li><a href="#footer">Rest</a></li>  
+								<!-- <li>
 									<a href="#">Dropdown</a>
 									<ul>
 										<li><a href="#">Lorem ipsum</a></li>
@@ -50,7 +54,7 @@
 								</li>
 								<li><a href="left-sidebar.html">Left Sidebar</a></li>
 								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
+								<li><a href="no-sidebar.html">No Sidebar</a></li> --> 
 							</ul>
 						</nav>
 
@@ -77,7 +81,7 @@
 
 			<!-- Main -->
 				<section id="main" class="wrapper style2">
-					<div class="title" id="#details">The Details</div>
+					<div class="title" id="details">The Details</div>
 					<div class="container">
 
 						<!-- Image -->
@@ -99,7 +103,7 @@
 									<div class="row">
 										<div class="col-6 col-12-medium">
 											<section>
-												<h3 class="icon fa-comment">Up to date information</h3>
+												<h3 class="icon fa-check-circle">Up to date information</h3>
 												<p>Products are being added to the site frequently. 
 													Others are taken off because they become obsolete or discontinued for various other reasons. 
 													Changes are being made to this site every single day!</p>
@@ -151,8 +155,33 @@
 									</div>
 								</div>
 								<ul class="actions special">
-									<li><a href="#" class="button style1 large">Get Started</a></li>
-									<li><a href="#" class="button style2 large">More Info</a></li>
+									<li id="myBtn"><span class="button style1 large">How to order?</span></li>
+									<div id="myModal" class="modal">
+
+										<!-- Modal content -->
+										<div class="modal-content">
+										  <div class="modal-header">
+											<span class="close">&times;</span>
+											<h2>Order Methods</h2>
+										  </div>
+										  <div class="modal-body">
+											<p>Simply call 800-827-9729 (503-667-3000) to place your order. (Be sure to see all our contact numbers on the bottom of this page!)
+												Please note that our offices are on the west coast of the United States, and are on Pacific Time. We are open Monday through Friday 8am to 5pm. Also, our time zone switches on and off of "Daylight savings time". So in the summer we are GMT -7 hours, and in the winter GMT -8 hours.</p>
+											<p>E-Mail your order to: <a href="mailto:salesD@onwx.com?Subject=sales">salesD@pnwx.com</a>.</p>
+											<p><a href="orderForm.pdf" target="_blank">Download our order form</a> and then Fax your order to: (503) 666-8855.</p>
+											<p><a href="orderForm.pdf" target="_blank">Download our order form</a> and then Mail your order in. (Be sure to call and ask for freight charges)
+												Please mail your order to:<br/>
+												ATTN: Order Processing.<br/>
+Pacific Northwest X-Ray Inc.<br/>
+P.O. Box 625<br>
+Gresham, OR 97030<br/>
+USA<br/>
+											</p>
+										  </div>
+										</div>
+									  
+									  </div>
+									<li><a href="#products" class="button style2 large">Our Catalog</a></li>
 								</ul>
 							</section>
 
@@ -161,7 +190,7 @@
 
 			<!-- Highlights -->
 				<section id="highlights" class="wrapper style3">
-					<div class="title">Our Products</div>
+					<div class="title" id="products">Popular Products</div>
 					<div class="container">
 						<div class="row aln-center">
 							<!--slider-->
@@ -443,17 +472,15 @@
 												<section>
 													<h3 class="icon fa-home">Mailing Address</h3>
 													<p>
-															P.O. Box 625 * Gresham,<br/> OR  97030 <br/> U.S.A.
+															P.O. Box 625 <br/> Gresham,<br/> OR  97030 <br/> U.S.A.
 													</p>
 												</section>
 											</div>
 											<div class="col-6 col-12-small">
 												<section>
 													<h3 class="icon fa-comment">Social</h3>
-													<p>
-														<a href="#">@untitled-corp</a><br />
-														<a href="#">linkedin.com/untitled</a><br />
-														<a href="#">facebook.com/untitled</a>
+													<p>Skype: 
+														<a href="skype:pnwxray?call">pnwxray</a><br />
 													</p>
 												</section>
 											</div>
@@ -469,7 +496,13 @@
 												<section>
 													<h3 class="icon fa-phone">Phone</h3>
 													<p>
-														(000) 555-0000
+														<strong>Toll Free U.S.A. :</strong><br/>
+														<small>800-827-XRAY (800-827-9729)</small>
+													<br/>
+														<small>866-PNW-XRAY (866-769-9729)</small>
+														<br/>
+														<strong>Outside U.S.A. :</strong><br/>
+														<small>1-503-667-3000</small>
 													</p>
 												</section>
 											</div>
@@ -480,7 +513,7 @@
 						</div>
 						<div id="copyright">
 							<ul>
-								<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>&copy; 1997-2019 </li><li>Pacific Northwest X-Ray Inc</li>
 							</ul>
 						</div>
 					</div>
@@ -502,6 +535,57 @@
 				$( '#mi-slider' ).catslider();
 
 			});
+
+			$(document).ready(function(){
+	// Add smooth scrolling to all links
+	$("a").on('click', function(event) {
+  
+	  // Make sure this.hash has a value before overriding default behavior
+	  if (this.hash !== "") {
+		// Prevent default anchor click behavior
+		event.preventDefault();
+  
+		// Store hash
+		var hash = this.hash;
+  
+		// Using jQuery's animate() method to add smooth page scroll
+		// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+		$('html, body').animate({
+		  scrollTop: $(hash).offset().top
+		}, 800, function(){
+	 
+		  // Add hash (#) to URL when done scrolling (default click behavior)
+		  window.location.hash = hash;
+		});
+	  } // End if
+	});
+  });
+// Get the modal
+let modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+let btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+let span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+	}
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal ) {
+	modal.style.display = "none";
+  }
+}
 		</script>
 
 	</body>

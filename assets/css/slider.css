@@ -287,11 +287,13 @@
 		font-size: 12px;
 		padding: 40px 10px 30px 14px;
 	}
+	
 }
 
 @media screen and (max-width: 740px){
 	.mi-slider {
 		height: 300px;
+		margin-top: 0;
 	}
 	.mi-slider nav {
 		top: 220px;
@@ -301,6 +303,7 @@
 @media screen and (max-width: 490px){ 
 	.mi-slider {
 		text-align: center;
+		margin-top: 0;
 		height: auto;
 	}
 
